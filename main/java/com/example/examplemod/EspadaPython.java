@@ -7,7 +7,7 @@ import net.minecraft.world.item.Tiers;
 
 public class EspadaPython extends SwordItem {
     public EspadaPython(Properties properties) {
-        super(Tiers.DIAMOND, 10000, -2.4F, properties);
+        super(Tiers.DIAMOND, 100, -1.4F, properties);
     }
 }
 
