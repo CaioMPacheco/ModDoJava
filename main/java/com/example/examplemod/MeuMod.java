@@ -54,15 +54,22 @@ public class MeuMod
     public static final RegistryObject<Item> ESPADA_PYTHON = ITEMS.register("espadapython",
             () -> new EspadaPython(new Item.Properties()));
 
+    public static final RegistryObject<Item> PYTHON_ITEM = ITEMS.register("python",
+            () -> new python(new Item.Properties()));
+
+
+
     public static final RegistryObject<CreativeModeTab> MEUMOD_TAB = CREATIVE_MODE_TABS.register("meumod_tab", () ->
             CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.examplemod"))
                     .icon(() -> ESPADA_PYTHON.get().getDefaultInstance())
                     .displayItems((parameters, output) -> {
                         output.accept(ESPADA_PYTHON.get());
+                        output.accept(PYTHON_ITEM.get());
                     })
                     .withTabsBefore(CreativeModeTabs.COMBAT)
                     .build()
+
     );
 
 
